@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { FileUploader } from "react-drag-drop-files";
+import Design from "./design/Design";
 
 const fileTypes = ['TXT'];
 
 function DragDrop() {
     const [file, setFile] = useState(null);
     const [fileContent, setFileContent] = useState('');
+    const [fileName, setFileName] = useState('')
     const [fileTypeErr, setFileTypeErr] = useState('');
-
+    const [booll, setBooll] = useState(false);
 
     let repeatedCount = 0;
 
     const handleChange = (file) => {
         setFile(file);
         setFileTypeErr(''); // Clear any previous error message
-
+        setFileName(file.name)
         // Read the content of the file
         const reader = new FileReader();
         reader.onload = function (event) {
@@ -63,17 +65,20 @@ function DragDrop() {
                 maxSize={1}
                 onSizeError={(file) => console.log(file)}
                 onTypeError={(err) => handleFileError(err)}
-                onDrop={(file) => console.log(file)}
-                onSelect={(file) => console.log(file)}
+                onDrop={() => { setBooll(true) }}
+                onSelect={() => { setBooll(true) }}
                 name="file"
+                children={<Design bool={booll} />}
                 types={fileTypes}
                 hoverTitle={'Drooooop'}
                 label="Upload TXT file" />
             {fileTypeErr && <p style={{ color: "#F00" }}>{fileTypeErr}</p>}
-            <p>{fileContent}</p>
+            <p>Text : {fileContent}</p>
+            <p>file name : {fileName}</p>
 
-            <p>{handleRepeated()}</p>
+            <p>text without repeat : {handleRepeated()}</p>
             <p>Count : {repeatedCount}</p>
+
         </div>
     );
 }
