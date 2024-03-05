@@ -1,0 +1,30 @@
+.container {
+    background-color: #242526;
+    width: 400px;
+    margin: 20px auto;
+    border: 2px dotted #FFF;
+    cursor: pointer;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 20px;
+}
+
+
+.fileimg {
+    width: 50px;
+}
+
+
+@media (max-width:502px) {
+    .container {
+        width: 250px;
+    }
+
+    .fileimg {
+        width: 30px;
+    }
+
+    .container h1 {
+        font-size: 14px;
+    }
+}

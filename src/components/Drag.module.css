@@ -1,0 +1,55 @@
+.maindiv {
+    background-color: #242526;
+    padding: 30px;
+    width: fit-content;
+    margin: 30px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden !important;
+}
+
+.content {
+    background-color: rgba(61, 61, 61, 0.685);
+    padding: 10px;
+    border-radius: 20px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.maindiv span {
+    color: rgb(39, 202, 66);
+}
+
+.errormsg {
+    color: rgb(177, 76, 76);
+    font-weight: bold;
+    text-align: center;
+}
+
+.table {
+    width: 400px;
+}
+
+.count {
+    background-color: rgba(61, 61, 61, 0.685);
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+@media (max-width:502px) {
+    .maindiv {
+        width: 90%;
+    }
+
+    .table {
+        width: 250px;
+    }
+}
