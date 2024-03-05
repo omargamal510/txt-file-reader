@@ -4,6 +4,38 @@ import Design from "./design/Design";
 import styles from './Drag.module.css'
 import { BeatLoader } from "react-spinners";
 
+/**
+ * @typedef {Object} File
+ * @property {string} name - The name of the file.
+ * @property {string} type - The MIME type of the file.
+ * @property {number} size - The size of the file in bytes.
+ */
+
+/**
+ * @typedef {Object} Props
+ * @property {function} handleChange - Function to handle file change.
+ * @property {number} maxSize - Maximum allowed file size in MB.
+ * @property {function} onSizeError - Function to handle size error.
+ * @property {function} onTypeError - Function to handle type error.
+ * @property {function} onSelect - Function to handle file selection.
+ * @property {function} onDrop - Function to handle file drop.
+ * @property {Object} dropMessageStyle - Style object for drop message.
+ * @property {string} name - Name of the file.
+ * @property {JSX.Element} children - Child component to display.
+ * @property {string[]} types - Allowed file types.
+ * @property {string} label - Label for file uploader.
+ */
+
+/**
+ * Component function for handling file uploads and displaying file content.
+ * @function DragDrop
+ * @returns {JSX.Element} The JSX element representing the DragDrop component.
+ */
+
+
+
+
+
 const fileTypes = ['TXT'];
 
 function DragDrop() {
