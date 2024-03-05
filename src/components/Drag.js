@@ -139,7 +139,7 @@ function DragDrop() {
                 onTypeError={(err) => handleFileError(err)}
                 onSelect={() => { setLoading(true) }}
                 onDrop={() => { setLoading(true) }}
-                dropMessageStyle={{ height: '90%', color: '#F00' }}
+                dropMessageStyle={{ height: '90%' }}
                 name="file"
                 children={<Design bool={booll} />}
                 types={fileTypes}
